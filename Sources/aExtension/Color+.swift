@@ -9,6 +9,7 @@ import Foundation
 
 #if canImport(SwiftUI)
 import SwiftUI
+@available(macOS 10.15, *)
 @available(iOS 13.0, *)
 extension Color {
     /// 使用 #FFFFFF 来初始化颜色
@@ -37,8 +38,8 @@ extension Color {
 }
 #endif
 
-#if canImport(Cocoa)
-import Cocoa
+#if canImport(Appkit)
+import Appkit
 extension NSColor {
     /// 使用 #FFFFFF 来初始化颜色
     convenience init(hex: String, alpha: CGFloat = 1.0) {
