@@ -11,7 +11,7 @@ import Foundation
 import SwiftUI
 @available(macOS 10.15, *)
 @available(iOS 13.0, *)
-extension Color {
+public extension Color {
     /// 使用 #FFFFFF 来初始化颜色
     init(hex: String, alpha: CGFloat = 1.0) {
         var hexFormatted: String = hex.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()
@@ -40,7 +40,7 @@ extension Color {
 
 #if canImport(AppKit)
 import AppKit
-extension NSColor {
+public extension NSColor {
     /// 使用 #FFFFFF 来初始化颜色
     convenience init(hex: String, alpha: CGFloat = 1.0) {
         var hexFormatted: String = hex.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()
@@ -69,7 +69,7 @@ extension NSColor {
 
 #if canImport(UIKit)
 import UIKit
-extension UIColor {
+public extension UIColor {
     /// 使用 #FFFFFF 来初始化颜色
     convenience init(hex: String, alpha: CGFloat = 1.0) {
         var hexFormatted: String = hex.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()
