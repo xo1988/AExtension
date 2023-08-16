@@ -38,8 +38,8 @@ extension Color {
 }
 #endif
 
-#if canImport(Appkit)
-import Appkit
+#if canImport(AppKit)
+import AppKit
 extension NSColor {
     /// 使用 #FFFFFF 来初始化颜色
     convenience init(hex: String, alpha: CGFloat = 1.0) {
